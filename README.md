@@ -1,2 +1,2 @@
-# BIT Studijos
+# BIT FullStack Studijos
  
