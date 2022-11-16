@@ -1,0 +1,1 @@
+Sukurkite du failus: red.html ir black.html. Failuose priskirkite atitinkamas fono spalvas ir įdėkite nuorodas iš vieno failo į kitą, kad atsidarius red.html išeitų patekti į black.html ir atvirkščiai. Nuorodoms priskirkite spalvą to failo į kurį jos turi keliauti.

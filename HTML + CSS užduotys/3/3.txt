@@ -1,0 +1,1 @@
+Sukurkite nuotraukų galeriją iš dešimties pasirinktų nuotraukų, kiekvienos nuotraukos plotis: 150px. 

@@ -1,0 +1,1 @@
+Sukurkite keturių paragrafų tekstą ir kiekvieną iš jų išlygiuokite keturiomis pozicijomis: left, right, center, justify.

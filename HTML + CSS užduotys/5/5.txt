@@ -1,0 +1,1 @@
+Sukurkite tris nuotraukas. Pasinaudodami kitais HTML elementais arba CSS žiniomis išrikiuokite jas visas vieną šalia kitos. Pabandykite pasinaudoti kitu matavimo vienetu priskiriant plotį. Pvz. 33%.

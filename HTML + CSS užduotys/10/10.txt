@@ -1,0 +1,1 @@
+Pirmose trijose sekcijose patalpinkite po sąrašą sudarytą iš dešimties elementų. Kiekvienam iš jų priskirkite skirtingą stilizavimo būdą. Sąrašus pozicionuokite vis skirtingose vietose pasinaudojant css savybėmis. Stilizuokite teksto šriftą, dydį ir spalvą. 

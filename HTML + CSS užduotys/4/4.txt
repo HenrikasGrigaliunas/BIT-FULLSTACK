@@ -1,0 +1,1 @@
+Patalpinkite prieš tai įdėtas nuotraukas tarp <a> elemento žymų. Priskirkite šiam elementui href atributą, kurio adresas būtų nuotraukos adresas.
