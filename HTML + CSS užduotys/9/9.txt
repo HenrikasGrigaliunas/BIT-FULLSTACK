@@ -1,1 +1,2 @@
-Sukurkite aštuonių sekcijų html puslapį ir navigaciją jam. Kiekviena sekcija turi turėti skirtingas fono spalvas. Kiekvienoje sekcijoje pridėkite h2 elementą, teksto ir nuotrauką. Išrykiuokite duomenis estetiškai sekcijos viduje ir pritaikykite prieš tai naudotus stilizavimo metodus kiekvienai sekcijai individualiai. 
+Sukurkite aštuonių sekcijų html puslapį ir navigaciją jam. Kiekviena sekcija turi turėti skirtingas fono spalvas. Kiekvienoje sekcijoje pridėkite h2 elementą, teksto ir nuotrauką. 
+Išrykiuokite duomenis estetiškai sekcijos viduje ir pritaikykite prieš tai naudotus stilizavimo metodus kiekvienai sekcijai individualiai. 
