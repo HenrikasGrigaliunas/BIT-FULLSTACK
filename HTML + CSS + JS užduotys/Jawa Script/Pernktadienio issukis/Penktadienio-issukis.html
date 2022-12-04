@@ -24,14 +24,17 @@
     const kiekis = rand(5,3000)
     const kaina = (vntKaina * kiekis)
     console.log('kiekis' , kiekis);
-    console.log('kaina' , kaina);
+    
     if(kaina >= 1000 && kaina <= 1999) {
         result = (kaina - (kaina * 0.03));
-        console.log('kaina su nuolaida' , result);
+        console.log('kaina' , result);
     }
-    if(kaina >= 2000) {
+    else if(kaina >= 2000) {
         result = (kaina - (kaina * 0.04));
-        console.log('kaina su nuolaida', result);
+        console.log('kaina', result);
+    }
+    else {
+        console.log('kaina' , kaina);
     }
 
     //Antra uzduotis//
