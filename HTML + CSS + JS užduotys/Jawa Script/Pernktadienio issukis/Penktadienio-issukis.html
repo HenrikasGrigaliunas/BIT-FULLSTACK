@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penktadienio issukis</title>
+</head>
+<body>
+    <p>Šiandien turėsite penktadienio iššūkį. Jums skiriamos trys Javascript užduotys:</p>
+    <ol>
+        <li>Įmonė parduoda žvakes po 1 EUR. Perkant daugiau kaip už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 2000 EUR - 4 % nuolaida. Parašykite programą, kuri skaičiuos žvakių kainą ir atspausdintų atsakymą kiek žvakių ir kokia kaina perkama. Žvakių kiekį generuokite rand() funkcija nuo 5 iki 3000.</li>
+        <li>Naudokite funkcija rand(). Sukurkite tris kintamuosius su atsitiktinėmis reikšmėmis nuo 0 iki 100. Suskaičiuokite jų aritmetinį vidurkį. Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra mažesnės nei 10 arba didesnės nei 90. Abu vidurkius atspausdinkite. Rezultatus apvalinkite iki sveiko skaičiaus.</li>
+        <li>Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes. Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją rand(). Sugeneruokite skaičių nuo 0 iki 300. Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir pridedamų sekundžių skaičių.</li>
+    </ol>
+    <script>
+        function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    //Pirma uzduotis//
+    const vntKaina = 1
+    const kiekis = rand(5,3000)
+    const kaina = (vntKaina * kiekis)
+    console.log('kiekis' , kiekis);
+    console.log('kaina' , kaina);
+    if(kaina >= 1000 && kaina <= 1999) {
+        result = (kaina - (kaina * 0.03));
+        console.log('kaina su nuolaida' , result);
+    }
+    if(kaina >= 2000) {
+        result = (kaina - (kaina * 0.04));
+        console.log('kaina su nuolaida', result);
+    }
+
+    //Antra uzduotis//
+
+    const x = rand(0,100)
+    const y = rand(0,100)
+    const z = rand(0,100)
+    const vidurkis = ((x + y + z) / 3)
+    const vidurkis2 = ((y + z) / 2)
+    const vidurkis3 = ((x + z) / 2)
+    const vidurkis4 = ((x + y) / 2)
+
+    console.log(x, y, z)
+    console.log('vidurkis',vidurkis.toFixed(0))
+    if (x < 10 || x >90) {
+        result = (vidurkis2);
+        console.log('vidurkis2', result.toFixed(0));
+    }
+    if (y < 10 || y >90) {
+        result = (vidurkis3);
+        console.log('vidurkis2', result.toFixed(0));
+    }
+    if (z < 10 || z >90) {
+        result = (vidurkis4);
+        console.log('vidurkis2', result.toFixed(0));
+    }
+
+    //Trecia uzduotis//
+
+    const h = rand(0,23);
+    const m = rand(0,59);
+    const s = rand(0,59);
+    const skaicius = rand(0,300);
+   
+    console.log( h + ':' + m + ':' + s);
+    if( h<10 ) {
+        console.log( '0' + h + ':' + m + ':' + s);
+    }
+    if( m<10 ) {
+        console.log( h + ':' + '0' + m + ':' + s);
+    }
+    if( s<10 ) {
+        console.log( h + ':' + m + ':' + '0' + s);
+     }
+
+    console.log('sekundziu skaicius' , skaicius);
+    
+    
+
+
+
+    </script>
+    
+</body>
+</html>
