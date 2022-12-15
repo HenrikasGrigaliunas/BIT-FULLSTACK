@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masyvai</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        document.write('<h2>Masyvai</h2>');
+       
+        document.write('<h5>Pirma užduotis</h5>');
+
+
+        //Sugeneruokite 10 skaičių masyvą pagal taisyklę: 
+        //Du pirmi skaičiai- atsitiktiniai nuo 5 iki 25. 
+        //Trečias, pirmo ir antro suma. 
+        //Ketvirtas- antro ir trečio suma. Penktas trečio ir ketvirto suma ir t.t.
+
+        const array = [];
+
+        for (let i = 0; i < 10; i++) {
+            array[0] = rand(5, 25);
+            array[1] = rand(5, 25);
+            array[2] = array[0] + array[1];
+            array[3] = array[1] + array[2];
+            array[4] = array[2] + array[3];
+            array[5] = array[3] + array[4];
+            array[6] = array[4] + array[5];
+            array[7] = array[5] + array[6];
+            array[8] = array[6] + array[7];
+            array[9] = array[7] + array[8];
+        }
+        document.write(array);
+        console.log(array);
+
+        document.write('<h5>Antra užduotis</h5>');
+
+        //Sukurkite masyvą iš 10 elementų. Kiekvienas masyvo elementas turi būti masyvas su atsitiktiniu kiekiu nuo 2 iki 20 elementų. 
+        //Elementų reikšmės atsitiktinai parinktos raidės iš intervalo A-Z. Išrūšiuokite antro lygio masyvus pagal abėcėlę (t.y. tuos kur su raidėm).
+
+        const string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const generatedArray = []
+
+        for(let i = 0; i < 10; i++) {
+           const count = rand(2, 20); 
+           //console.log('pirmo lygio masyvo elemento generavimas');
+           generatedArray[i] = [];
+           for(let x = 0; x < count; x++) {
+            //console.log('antro lygio masyvo elemento generavimas');
+            const letter = string[rand(0, string.length - 1)]
+            //console.log(letter);
+            //generatedArray[generatedArray.length]
+            generatedArray[i].push(letter);
+           }
+           generatedArray[i].sort();
+        }
+        console.log(generatedArray);
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
