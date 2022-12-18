@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daugiamaciai masyvai</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        document.write('<h1>Daugiamačiai Masyvai</h1>');
+        document.write('<h2>Pirma užduotis</h2>');
+        console.log('<<<<< Pirma užduotis >>>>>')
+        //Sugeneruokite masyvą iš 10 elementų, kurio elementai būtų masyvai iš 5 elementų su reikšmėmis nuo 5 iki 25.
+
+        const array = [];
+
+        for (let i = 0; i < 10; i++) {
+            array[i] = [];
+            for (let x = 0; x < 5; x++) {
+                const number = rand(5, 25);
+                array[i].push(number);
+            }
+        }
+        console.log(array);
+        document.write(array);
+
+
+
+        document.write('<h2>Antra užduotis</h2>');
+        //Naudodamiesi 1 uždavinio masyvu:
+        // a) Suskaičiuokite kiek masyve yra elementų didesnių už 10;
+        console.log('<<<<< Antra užduotis >>>>>')
+        console.log('<<<<< a) >>>>>')
+
+        let count = 0;
+
+
+        for (let i = 0; i < array.length; i++) {
+            for (let x = 0; x < array[i].length; x++) {
+                if (array[i][x] > 10) {
+                    count++
+                }
+            }
+
+        }
+        console.log(count);
+        document.write('a) masyve yra ' + count + ' elementai didesni už 10,');
+
+        // b) Raskite didžiausio elemento reikšmę;
+        console.log('<<<<< b) >>>>>')
+
+        console.log(Math.max(...array.flat()));
+        document.write(' b) Dižiausio elemento reikšmė yra ' + Math.max(...array.flat()))
+
+        // c) Suskaičiuokite kiekvieno antro lygio masyvų su vienodais indeksais sumas (t.y. suma reikšmių turinčių indeksą 0, 1 ir t.t.)
+
+        console.log('<<<<< c) >>>>>')
+
+        let index0sum = 0
+        let index1sum = 0
+        let index2sum = 0
+        let index3sum = 0
+        let index4sum = 0
+
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < 1; j++) {
+                if (array[i].indexOf(0)) {
+                    index0sum += array[i][0]
+                }
+                if (array[i].indexOf(1)) {
+                    index1sum += array[i][1]
+                }
+                if (array[i].indexOf(2)) {
+                    index2sum += array[i][2]
+                }
+                if (array[i].indexOf(3)) {
+                    index3sum += array[i][3]
+                }
+                if (array[i].indexOf(4)) {
+                    index4sum += array[i][4]
+                }
+
+            }
+        }
+        console.log('0 indexo skaičių suma:', index0sum)
+        console.log('1 indexo skaičių suma:', index1sum)
+        console.log('2 indexo skaičių suma:', index2sum)
+        console.log('3 indexo skaičių suma:', index3sum)
+        console.log('4 indexo skaičių suma:', index4sum)
+
+        // d) Visus antro lygio masyvus “pailginkite” iki 7 elementų
+        console.log('<<<<< d >>>>>')
+
+        for (let i = 0; i < array.length; i++) {
+            for (let x = 0; x < array[i].length; x++) {
+                if (array[i].length < 7) {
+                    array[i].push(rand(5, 25))
+                }
+            }
+        }
+
+        console.log('Pailgintas antro lygio masyvas:', array)
+
+        // e) Suskaičiuokite kiekvieno iš antro lygio masyvų elementų sumą atskirai ir sumas panaudokite kaip reikšmes sukuriant naują masyvą. T.y. pirma naujo masyvo reikšmė turi būti lygi mažesnio masyvo, turinčio indeksą 0 dideliame masyve, visų elementų sumai 
+        console.log('<<<<< e) >>>>>')
+
+        let newArray = []
+        let indexSum = 0
+
+        for (let i = 0; i < array.length; i++) {
+            for (let x = 0; x < array[x].length; x++) {
+                indexSum += array[i][x]
+            }
+            newArray.push(indexSum);
+            indexSum = 0
+
+        }
+        console.log('Gautas naujas masyvas:', newArray)
+
+        //Trečia užduotis
+        //Sukurkite masyvą iš 10 elementų. Masyvo reikšmes užpildykite pagal taisyklę: generuokite skaičių nuo 0 iki 5. Ir sukurkite tokio ilgio masyvą. Jeigu reikšmė yra 0 masyvo nekurkite. Antro lygio masyvo reikšmes papildykite atsitiktiniais skaičiais nuo 0 iki 10. Ten kur masyvo nėra įkelkite skaičių nuo 0 iki 10.
+        console.log('<<<<< Trečia užduotis >>>>>')
+
+        let randomArray = []
+        let arrayToPush = []
+
+        for (let i = 0; i < 10; i++) {
+            let arrayLength = rand(0, 1)
+
+            if (arrayLength === 0) {
+                randomArray[i] = rand(99, 99);
+            } else {
+                arrayToPush = []
+                for (let x = 0; x < arrayLength; x++) {
+                    if (arrayLength > 0) {
+                        arrayToPush[x] = rand(1, 10)
+                    }
+                }
+                randomArray.push(arrayToPush)
+            }
+        }
+
+        console.log(randomArray)
+
+        // Ketvirta užduotis
+        // Paskaičiuokite 3 uždavinio masyvo visų reikšmių sumą ir išrūšiuokite masyvą taip, kad pirmiausiai eitų mažiausios masyvo reikšmės arba jeigu reikšmė yra masyvas, to masyvo reikšmių sumos.
+        console.log('<<<<< Ketvirta užduotis >>>>>')
+
+
+
+        function arrSum(arr) {
+            let sumOfArray = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (typeof arr[i] == 'object') {
+                    sumOfArray += arrSum(arr[i]);
+                } else {
+                    sumOfArray += arr[i];
+                }
+            }
+            return sumOfArray;
+        }
+
+        console.log(arrSum(randomArray))
+
+    </script>
+
+</body>
+
+</html>
